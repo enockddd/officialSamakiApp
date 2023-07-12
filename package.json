@@ -2,7 +2,7 @@
   "name": "samaki_social_app",
   "version": "1.0.0",
   "description": "A new Flutter project.",
-  "main": "servergit.js",
+  "main": "server.js",
   "directories": {
     "lib": "lib",
     "test": "test"

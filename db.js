@@ -2,9 +2,9 @@ const mysql = require('mysql');
 
 const pool  = mysql.createPool({
   connectionLimit : 10,
-  host     : '127.0.0.1',
-  user     : 'root',
-  password : '',
+  host     : 'enockddd.mysql.pythonanywhere-services.com',
+  user     : 'enockddd',
+  password : 'tish1997!q',
   database : 'aquartic',
   
 });

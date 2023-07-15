@@ -6,6 +6,7 @@ require('dotenv').config();
 
 const registerUser = (req, res) => {
   const { user_id, username, email, profile_picture } = req.body;
+  console.log(email);
 
   // Check if email is provided
   if (!email) {

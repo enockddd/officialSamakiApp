@@ -12,11 +12,11 @@ const registerUser = (req, res) => {
     return res.status(400).json({ error: 'Email is required' });
   }
 
-  pool.query(queries.getUserByEmail, [email], async (error, results) => {
-    if (error) {
-      console.error(error);
-      return res.status(500).json({ error: `Internal server error while getting user ${email}` });
-    }
+  // pool.query(queries.getUserByEmail, [email], async (error, results) => {
+  //   if (error) {
+  //     console.error(error);
+  //     return res.status(500).json({ error: `Internal server error while getting user ${email}` });
+  //   }
 
     // Check if user already exists
     if (results.length > 0) {

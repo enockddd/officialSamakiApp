@@ -9,13 +9,13 @@ const registerUser = (req, res) => {
 
   // Check if email is provided
   if (!email) {
-    return res.status(400).json({ error: 'Email is required' });
+    return res.status(400).json({ error: 'Email is required ' });
   }
 
   pool.query(queries.getUserByEmail, [email], async (error, results) => {
     if (error) {
       console.error(error);
-      return res.status(500).json({ error: 'Internal server error' });
+      return res.status(500).json({ error: 'Internal server error if your were tyring getting email' });
     }
 
     // Check if user already exists
@@ -26,7 +26,7 @@ const registerUser = (req, res) => {
     pool.query(queries.registerUser, [user_id, username, email, profile_picture], (error, results) => {
       if (error) {
         console.error(error);
-        return res.status(500).json({ error: 'Internal server error' });
+        return res.status(500).json({ error: 'Internal server error if your were tyring registration' });
       }
 
       const jwtPayload = {

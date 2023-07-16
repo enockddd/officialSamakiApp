@@ -4,7 +4,7 @@ const pool  = mysql.createPool({
   connectionLimit : 10,
   host     : 'enockddd.mysql.pythonanywhere-services.com',
   user     : 'enockddd',
-  password : 'Myapplication',
+  password : 'tish1997!q',
   database : 'enockddd$aquartic',
   
 });

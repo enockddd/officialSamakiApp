@@ -1,14 +1,11 @@
 const mysql = require('mysql');
 
-const pool  = mysql.createPool({
+const pool = mysql.createPool({
   connectionLimit: 10,
-  socketPath: '/cloudsql/fiery-azimuth-393715:us-central1:tish1997',
+  host: '34.31.249.114', // Use the Public IP address of your Cloud SQL instance
   user: 'tish1997',
   password: 'tish1997!q',
   database: 'aquartic',
-  
 });
 
 module.exports = pool;
-
-

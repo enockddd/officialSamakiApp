@@ -31,8 +31,8 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: 'Something went wrong!' });
 });
 
-app.listen(80, () => { // Use port 80 for HTTP
-  console.log('Server is listening on port 80');
+app.listen(443 , () => { // Use port 80 for HTTP
+  console.log('Server is listening on port 443 ');
 }).on('error', err => {
   console.error('Server failed to start:', err);
 });

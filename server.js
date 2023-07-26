@@ -8,7 +8,7 @@ const searchRoute = require('./src/search/routes');
 
 
 const app = express();
-const port = 5900;
+
 
 // Middleware
 app.use(bodyParser.json());
@@ -31,8 +31,8 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: 'Something went wrong!' });
 });
 
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
+app.listen(80, () => { // Use port 80 for HTTP
+  console.log('Server is listening on port 80');
 }).on('error', err => {
   console.error('Server failed to start:', err);
 });
